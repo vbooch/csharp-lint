@@ -1,14 +1,14 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.Diagnostics;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.Diagnostics;
+using Newtonsoft.Json;
 
 namespace CSharpLint
 {
@@ -65,6 +65,7 @@ namespace CSharpLint
             int endLine = lineSpan.EndLinePosition.Line;
             string id = diagnostic.Id;
             string message = diagnostic.GetMessage();
+            string desc = diagnostic.Descriptor.Description.ToString();
 
             Severity severity = Severity.None;
 
@@ -77,7 +78,7 @@ namespace CSharpLint
                 severity = saViolations.First(v => v.Id == id).Severity;
             }
 
-            return new Violation(startLine, endLine, id, message, severity);
+            return new Violation(startLine, endLine, id, message, desc, severity);
         }
 
         private static Violation[] ReadSAViolations()

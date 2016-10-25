@@ -1,33 +1,41 @@
-﻿using System;
-using System.Collections.Immutable;
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.Diagnostics;
-using Newtonsoft.Json;
-
-namespace CSharpLint
+﻿namespace CSharpLint
 {
-    public static class Analyzer
-    {
-        private static Violation[] saViolations = ReadSAViolations();
+    using System;
+    using System.Collections.Generic;
+    using System.Collections.Immutable;
+    using System.Diagnostics.CodeAnalysis;
+    using System.IO;
+    using System.Linq;
+    using System.Reflection;
+    using System.Threading.Tasks;
+    using CSharpLint.Model;
+    using Microsoft.CodeAnalysis;
+    using Microsoft.CodeAnalysis.CSharp;
+    using Microsoft.CodeAnalysis.Diagnostics;
+    using Newtonsoft.Json;
 
-        public static ImmutableArray<Violation> Analyze(string filePath, string csharpSource)
+    public class Analyzer
+    {
+        private Dictionary<string, Violation> styleViolations;
+
+        public Analyzer()
+        {
+            styleViolations = ReadStyleViolations().ToDictionary(e => e.Id);
+        }
+
+        public IEnumerable<LintIssue> Analyze(string filePath, string csharpSource)
         {
             ImmutableArray<Diagnostic> diagnostics = GetDiagnostics(filePath, csharpSource);
 
-            return diagnostics
-                .Select(diagnostic => CreateViolation(diagnostic))
-                .Where(violation => violation.Severity > Severity.None)
-                .ToImmutableArray();
+            return diagnostics.Select(CreateIssue).Where(violation => violation.Severity < LintSeverity.Disabled);
         }
 
-        [SuppressMessage("Microsoft.Reliability", "CA2001:AvoidCallingProblematicMethods", MessageId = "System.Reflection.Assembly.LoadFile", Justification = "No other option.")]
-        private static ImmutableArray<Diagnostic> GetDiagnostics(string filePath, string csharpSource)
+        [SuppressMessage(
+            "Microsoft.Reliability",
+            "CA2001:AvoidCallingProblematicMethods",
+            MessageId = "System.Reflection.Assembly.LoadFile",
+            Justification = "No other option.")]
+        private ImmutableArray<Diagnostic> GetDiagnostics(string filePath, string csharpSource)
         {
             SyntaxTree tree = CSharpSyntaxTree.ParseText(csharpSource, path: filePath);
 
@@ -52,50 +60,59 @@ namespace CSharpLint
             analyzerDiagnosticsTask.Wait();
             ImmutableArray<Diagnostic> analyzerDiagnostics = analyzerDiagnosticsTask.Result;
 
-            return parseDiagnostics
-                .Concat(analyzerDiagnostics)
-                .ToImmutableArray();
+            return parseDiagnostics.Concat(analyzerDiagnostics).ToImmutableArray();
         }
 
-        private static Violation CreateViolation(Diagnostic diagnostic)
+
+        private LintIssue CreateIssue(Diagnostic diagnostic)
         {
-            FileLinePositionSpan lineSpan = diagnostic.Location.GetLineSpan();
+            var lineSpan = diagnostic.Location.GetLineSpan();
+            var line = lineSpan.StartLinePosition.Line;
+            var column = lineSpan.StartLinePosition.Character;
 
-            int startLine = lineSpan.StartLinePosition.Line;
-            int endLine = lineSpan.EndLinePosition.Line;
-            string id = diagnostic.Id;
-            string message = diagnostic.GetMessage();
-            string desc = diagnostic.Descriptor.Description.ToString();
+            var code = diagnostic.Id;
+            var name = diagnostic.GetMessage();
+            var desc = diagnostic.Descriptor.Description.ToString();
 
-            Severity severity = Severity.None;
+            var severity = LintSeverity.Advice;
 
-            if (id.StartsWith("CS"))
+            if (code.StartsWith("CS"))
             {
-                severity = Severity.Error;
-            }
-            else if (id.StartsWith("SA"))
-            {
-                severity = saViolations.First(v => v.Id == id).Severity;
+                severity = LintSeverity.Error;
             }
 
-            return new Violation(startLine, endLine, id, message, desc, severity);
+            if (code.StartsWith("SA") && styleViolations.ContainsKey(code))
+            {
+                var definedSeverity = styleViolations[code].Severity;
+                switch (definedSeverity)
+                {
+                    case Severity.None: severity = LintSeverity.Disabled; break;
+                    case Severity.MajorWarning: severity = LintSeverity.Warning; break;
+                    case Severity.Error: severity = LintSeverity.Error; break;
+                    case Severity.MinorWarning: severity = LintSeverity.Advice; break;
+                    default: severity = LintSeverity.Disabled; break;
+                }
+            }
+
+            return new LintIssue(code, name, desc, severity, line, column);
         }
 
-        private static Violation[] ReadSAViolations()
+        private Violation[] ReadStyleViolations()
         {
-            string saViolationsJson = File.ReadAllText(GetPathToFile(@"Resources/SAViolations.json"));
-            return JsonConvert.DeserializeObject<Violation[]>(saViolationsJson);
+            string violationsJson = File.ReadAllText(GetPathToFile(@"Resources/SAViolations.json"));
+            return JsonConvert.DeserializeObject<Violation[]>(violationsJson);
         }
 
-        private static string GetPathToFile(string file)
+        private string GetPathToFile(string file)
         {
             string exeFilePath = Assembly.GetExecutingAssembly().Location;
             string exeFolder = Path.GetDirectoryName(exeFilePath);
             return Path.Combine(exeFolder, file);
         }
 
-        private static void OnAnalyzerException(Exception exception, DiagnosticAnalyzer analyzer, Diagnostic diagnostic)
+        private void OnAnalyzerException(Exception exception, DiagnosticAnalyzer analyzer, Diagnostic diagnostic)
         {
+            // do nothing
         }
     }
 }

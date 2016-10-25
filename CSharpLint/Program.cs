@@ -1,11 +1,11 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Immutable;
-using System.IO;
-using Vstack.Extensions;
-
-namespace CSharpLint
+﻿namespace CSharpLint
 {
+    using System;
+    using System.IO;
+    using CSharpLint.Model;
+    using Newtonsoft.Json;
+    using Vstack.Extensions;
+
     public static class Program
     {
         public static void Main(string[] args)
@@ -18,17 +18,20 @@ namespace CSharpLint
                 Environment.Exit(1);
             }
 
-            string filePath = args[0];
-
+            var filePath = args[0];
             if (!File.Exists(filePath))
             {
                 Console.Write("The specified file could not be found.");
                 Environment.Exit(1);
             }
 
-            string csharpSource = File.ReadAllText(filePath);
-            ImmutableArray<Violation> violations = Analyzer.Analyze(filePath, csharpSource);
-            Console.WriteLine(JsonConvert.SerializeObject(violations, Formatting.Indented));
+            var csharpSource = File.ReadAllText(filePath);
+
+            var analyzer = new Analyzer();
+            var issues = analyzer.Analyze(filePath, csharpSource);
+            var result = new LintResults(issues, filePath);
+
+            Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
         }
     }
 }

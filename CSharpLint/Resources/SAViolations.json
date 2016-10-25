@@ -163,7 +163,7 @@
   {
     "Id": "SA1101",
     "Name": "PrefixLocalCallsWithThis",
-    "Severity": "MajorWarning"
+    "Severity": "None"
   },
   {
     "Id": "SA1102",

@@ -16,7 +16,7 @@
 
     public class Analyzer
     {
-        private Dictionary<string, Violation> styleViolations;
+        private readonly Dictionary<string, Violation> styleViolations;
 
         public Analyzer()
         {
@@ -87,9 +87,9 @@
                 switch (definedSeverity)
                 {
                     case Severity.None: severity = LintSeverity.Disabled; break;
-                    case Severity.MajorWarning: severity = LintSeverity.Warning; break;
+                    case Severity.Warning: severity = LintSeverity.Warning; break;
                     case Severity.Error: severity = LintSeverity.Error; break;
-                    case Severity.MinorWarning: severity = LintSeverity.Advice; break;
+                    case Severity.Advice: severity = LintSeverity.Advice; break;
                     default: severity = LintSeverity.Disabled; break;
                 }
             }
@@ -99,7 +99,7 @@
 
         private Violation[] ReadStyleViolations()
         {
-            string violationsJson = File.ReadAllText(GetPathToFile(@"Resources/SAViolations.json"));
+            string violationsJson = File.ReadAllText(GetPathToFile(@"violations.json"));
             return JsonConvert.DeserializeObject<Violation[]>(violationsJson);
         }
 

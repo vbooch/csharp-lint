@@ -4,9 +4,9 @@
     {
         public Violation(string id, string message, Severity severity)
         {
-            this.Id = id;
-            this.Message = message;
-            this.Severity = severity;
+            Id = id;
+            Message = message;
+            Severity = severity;
         }
 
         public string Id { get; }

@@ -3,8 +3,8 @@
     public enum Severity
     {
         Error = 3,
-        MajorWarning = 2,
-        MinorWarning = 1,
+        Warning = 2,
+        Advice = 1,
         None = 0
     }
 }

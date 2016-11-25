@@ -13,22 +13,22 @@
   {
     "Id": "SA1000",
     "Name": "KeywordsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1001",
     "Name": "CommasMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1002",
     "Name": "SemicolonsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1003",
     "Name": "SymbolsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1004",
@@ -38,127 +38,127 @@
   {
     "Id": "SA1005",
     "Name": "SingleLineCommentsMustBeginWithSingleSpace",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1006",
     "Name": "PreprocessorKeywordsMustNotBePrecededBySpace",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1007",
     "Name": "OperatorKeywordMustBeFollowedBySpace",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1008",
     "Name": "OpeningParenthesisMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1009",
     "Name": "ClosingParenthesisMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1010",
     "Name": "OpeningSquareBracketsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1011",
     "Name": "ClosingSquareBracketsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1012",
     "Name": "OpeningBracesMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1013",
     "Name": "ClosingBracesMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1014",
     "Name": "OpeningGenericBracketsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1015",
     "Name": "ClosingGenericBracketsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1016",
     "Name": "OpeningAttributeBracketsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1017",
     "Name": "ClosingAttributeBracketsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1018",
     "Name": "NullableTypeSymbolsMustNotBePrecededBySpace",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1019",
     "Name": "MemberAccessSymbolsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1020",
     "Name": "IncrementDecrementSymbolsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1021",
     "Name": "NegativeSignsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1022",
     "Name": "PositiveSignsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1023",
     "Name": "DereferenceAndAccessOfMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1024",
     "Name": "ColonsMustBeSpacedCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1025",
     "Name": "CodeMustNotContainMultipleWhitespaceInARow",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1026",
     "Name": "CodeMustNotContainSpaceAfterNewKeywordInImplicitlyTypedArrayAllocation",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1027",
     "Name": "UseTabsCorrectly",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1028",
     "Name": "CodeMustNotContainTrailingWhitespace",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1100",
     "Name": "DoNotPrefixCallsWithBaseUnlessLocalImplementationExists",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1101",
@@ -168,172 +168,172 @@
   {
     "Id": "SA1102",
     "Name": "QueryClauseMustFollowPreviousClause",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1103",
     "Name": "QueryClauseQueryClausesMustBeOnSeparateLinesOrAllOnOneLine",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1104",
     "Name": "QueryClauseMustBeginOnNewLineWhenPreviousClauseSpansMultipleLines",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1105",
     "Name": "QueryClausesSpanningMultipleLinesMustBeginOnOwnLine",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1106",
     "Name": "CodeMustNotContainEmptyStatements",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1107",
     "Name": "CodeMustNotContainMultipleStatementsOnOneLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1108",
     "Name": "BlockStatementsMustNotContainEmbeddedComments",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1109",
     "Name": "BlockStatementsMustNotContainEmbeddedRegions",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1110",
     "Name": "OpeningParenthesisMustBeOnDeclarationLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1111",
     "Name": "ClosingParenthesisMustBeOnLineOfLastParameter",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1112",
     "Name": "ClosingParenthesisMustBeOnLineOfOpeningParenthesis",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1113",
     "Name": "CommaMustBeOnSameLineAsPreviousParameter",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1114",
     "Name": "ParameterListMustFollowDeclaration",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1115",
     "Name": "ParameterMustFollowComma",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1116",
     "Name": "SplitParametersMustStartOnLineAfterDeclaration",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1117",
     "Name": "ParametersMustBeOnSameLineOrSeparateLines",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1118",
     "Name": "ParameterMustNotSpanMultipleLines",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1119",
     "Name": "StatementMustNotUseUnnecessaryParenthesis",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1120",
     "Name": "CommentsMustContainText",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1121",
     "Name": "UseBuiltInTypeAlias",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1122",
     "Name": "UseStringEmptyForEmptyStrings",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1123",
     "Name": "DoNotPlaceRegionsWithinElements",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1124",
     "Name": "DoNotUseRegions",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1125",
     "Name": "UseShorthandForNullableTypes",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1126",
     "Name": "PrefixCallsCorrectly",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1127",
     "Name": "GenericTypeConstraintsMustBeOnOwnLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1128",
     "Name": "ConstructorInitializerMustBeOnOwnLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1129",
     "Name": "DoNotUseDefaultValueTypeConstructor",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1130",
     "Name": "UseLambdaSyntax",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1131",
     "Name": "UseReadableConditions",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1132",
     "Name": "DoNotCombineFields",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1133",
     "Name": "DoNotCombineAttributes",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1134",
     "Name": "AttributesMustNotShareLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1136",
     "Name": "EnumValuesShouldBeOnSeparateLines",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1200",
@@ -343,37 +343,37 @@
   {
     "Id": "SA1201",
     "Name": "ElementsMustAppearInTheCorrectOrder",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1202",
     "Name": "ElementsMustBeOrderedByAccess",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1203",
     "Name": "ConstantsMustAppearBeforeFields",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1204",
     "Name": "StaticElementsMustAppearBeforeInstanceElements",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1205",
     "Name": "PartialElementsMustDeclareAccess",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1206",
     "Name": "DeclarationKeywordsMustFollowOrder",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1207",
     "Name": "ProtectedMustComeBeforeInternal",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1208",
@@ -383,7 +383,7 @@
   {
     "Id": "SA1209",
     "Name": "UsingAliasDirectivesMustBePlacedAfterOtherUsingDirectives",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1210",
@@ -398,22 +398,22 @@
   {
     "Id": "SA1212",
     "Name": "PropertyAccessorsMustFollowOrder",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1213",
     "Name": "EventAccessorsMustFollowOrder",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1214",
     "Name": "ReadonlyElementsMustAppearBeforeNonReadonlyElements",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1215",
     "Name": "InstanceReadonlyElementsMustAppearBeforeInstanceNonReadonlyElements",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1216",
@@ -428,137 +428,137 @@
   {
     "Id": "SA1300",
     "Name": "ElementMustBeginWithUpperCaseLetter",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1301",
     "Name": "ElementMustBeginWithLowerCaseLetter",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1302",
     "Name": "InterfaceNamesMustBeginWithI",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1303",
     "Name": "ConstFieldNamesMustBeginWithUpperCaseLetter",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1304",
     "Name": "NonPrivateReadonlyFieldsMustBeginWithUpperCaseLetter",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1305",
     "Name": "FieldNamesMustNotUseHungarianNotation",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1306",
     "Name": "FieldNamesMustBeginWithLowerCaseLetter",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1307",
     "Name": "AccessibleFieldsMustBeginWithUpperCaseLetter",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1308",
     "Name": "VariableNamesMustNotBePrefixed",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1309",
     "Name": "FieldNamesMustNotBeginWithUnder",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1310",
     "Name": "FieldNamesMustNotContainUnder",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1311",
     "Name": "StaticReadonlyFieldsMustBeginWithUpperCaseLetter",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1312",
     "Name": "VariableNamesMustBeginWithLowerCaseLetter",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1313",
     "Name": "ParameterNamesMustBeginWithLowerCaseLetter",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1400",
     "Name": "AccessModifierMustBeDeclared",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1401",
     "Name": "FieldsMustBePrivate",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1402",
     "Name": "FileMayOnlyContainASingleClass",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1403",
     "Name": "FileMayOnlyContainASingleNamespace",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1404",
     "Name": "CodeAnalysisSuppressionMustHaveJustification",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1405",
     "Name": "DebugAssertMustProvideMessageText",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1406",
     "Name": "DebugFailMustProvideMessageText",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1407",
     "Name": "ArithmeticExpressionsMustDeclarePrecedence",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1408",
     "Name": "ConditionalExpressionsMustDeclarePrecedence",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1409",
     "Name": "RemoveUnnecessaryCode",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1410",
     "Name": "RemoveDelegateParenthesisWhenPossible",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1411",
     "Name": "AttributeConstructorMustNotUseUnnecessaryParenthesis",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1412",
     "Name": "StoreFilesAsUtf8",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1413",
@@ -568,107 +568,107 @@
   {
     "Id": "SA1500",
     "Name": "BracesForMultiLineStatementsMustNotShareLine",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1501",
     "Name": "StatementMustNotBeOnSingleLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1502",
     "Name": "ElementMustNotBeOnSingleLine",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1503",
     "Name": "BracesMustNotBeOmitted",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1504",
     "Name": "AllAccessorsMustBeSingleLineOrMultiLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1505",
     "Name": "OpeningBracesMustNotBeFollowedByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1506",
     "Name": "ElementDocumentationHeadersMustNotBeFollowedByBlankLine",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1507",
     "Name": "CodeMustNotContainMultipleBlankLinesInARow",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1508",
     "Name": "ClosingBracesMustNotBePrecededByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1509",
     "Name": "OpeningBracesMustNotBePrecededByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1510",
     "Name": "ChainedStatementBlocksMustNotBePrecededByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1511",
     "Name": "WhileDoFooterMustNotBePrecededByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1512",
     "Name": "SingleLineCommentsMustNotBeFollowedByBlankLine",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1513",
     "Name": "ClosingBraceMustBeFollowedByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1514",
     "Name": "ElementDocumentationHeaderMustBePrecededByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1515",
     "Name": "SingleLineCommentMustBePrecededByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1516",
     "Name": "ElementsMustBeSeparatedByBlankLine",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1517",
     "Name": "CodeMustNotContainBlankLinesAtStartOfFile",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1518",
     "Name": "UseLineEndingsCorrectlyAtEndOfFile",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1519",
     "Name": "BracesMustNotBeOmittedFromMultiLineChildStatement",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1520",
     "Name": "UseBracesConsistently",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1600",
@@ -863,7 +863,7 @@
   {
     "Id": "SA1638",
     "Name": "FileHeaderFileNameDocumentationMustMatchFileName",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1639",
@@ -883,17 +883,17 @@
   {
     "Id": "SA1642",
     "Name": "ConstructorSummaryDocumentationMustBeginWithStandardText",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1643",
     "Name": "DestructorSummaryDocumentationMustBeginWithStandardText",
-    "Severity": "MinorWarning"
+    "Severity": "Advice"
   },
   {
     "Id": "SA1644",
     "Name": "DocumentationHeadersMustNotContainBlankLines",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1645",
@@ -918,7 +918,7 @@
   {
     "Id": "SA1649",
     "Name": "FileNameMustMatchTypeName",
-    "Severity": "MajorWarning"
+    "Severity": "Warning"
   },
   {
     "Id": "SA1650",

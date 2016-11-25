@@ -16,4 +16,4 @@ The program outputs an array of violations in JSON format. Each violation has th
 * `EndLine`: the line on which the violation ends
 * `Id`: the id of the violation (CSxxxx or SAxxxx)
 * `Message`: the error or warning message
-* `Severity`: severity of the violation, 3 = Error; 2 = MajorWarning; 1 = MinorWarning
+* `Severity`: severity of the violation, 3 = Error; 2 = Warning; 1 = Advice

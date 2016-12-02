@@ -63,7 +63,6 @@
             return parseDiagnostics.Concat(analyzerDiagnostics).ToImmutableArray();
         }
 
-
         private LintIssue CreateIssue(Diagnostic diagnostic)
         {
             var lineSpan = diagnostic.Location.GetLineSpan();
@@ -86,11 +85,21 @@
                 var definedSeverity = styleViolations[code].Severity;
                 switch (definedSeverity)
                 {
-                    case Severity.None: severity = LintSeverity.Disabled; break;
-                    case Severity.Warning: severity = LintSeverity.Warning; break;
-                    case Severity.Error: severity = LintSeverity.Error; break;
-                    case Severity.Advice: severity = LintSeverity.Advice; break;
-                    default: severity = LintSeverity.Disabled; break;
+                    case Severity.None:
+                        severity = LintSeverity.Disabled;
+                        break;
+                    case Severity.Warning:
+                        severity = LintSeverity.Warning;
+                        break;
+                    case Severity.Error:
+                        severity = LintSeverity.Error;
+                        break;
+                    case Severity.Advice:
+                        severity = LintSeverity.Advice;
+                        break;
+                    default:
+                        severity = LintSeverity.Disabled;
+                        break;
                 }
             }
 
